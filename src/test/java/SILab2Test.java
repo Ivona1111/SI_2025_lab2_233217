@@ -16,7 +16,7 @@ public class SILab2Test {
         exception = assertThrows(RuntimeException.class, () -> SILab2.checkCart(List.of(new Item("", 20, 150, 0.0)), ""));
         assertTrue(exception.getMessage().contains("Invalid item!"));
 
-        assertEquals(7670.0, SILab2.checkCart(List.of(new Item("Computer", 14, 550, 0.0)), "0123456789678541"));
+        assertEquals(7670.0, SILab2.checkCart(List.of(new Item("Laptop", 14, 550, 0.0)), "0123456789678541"));
 
         exception = assertThrows(RuntimeException.class, () -> SILab2.checkCart(List.of(new Item("Laptop", 24, 550, 0.3)), "98586983935"));
         assertTrue(exception.getMessage().contains("Invalid card number!"));
